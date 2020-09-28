@@ -17,3 +17,8 @@ def print_board(bo):
         # every 3 lines it will add dashes for readability
         if i % 3 == 0 and i != 0:
             print("-------------")
+
+        for j in len(bo[0]):
+            if j % 3 == 0 and j != 0:
+                print(" | ", end="")
+
