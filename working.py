@@ -27,7 +27,17 @@ def print_board(bo):
             else:
                 print(str(bo[i][j]) + " ", end="")
 
-print_board(board)
+def find_empty(bo):
+    # iterate over the board
+    for i in range(len(bo)):
+        for j in range(len(bo[0])):
+            # if empty return tuple, (row, column)
+            if bo[i][j] == 0:
+                return i, j
+
+
+
+find_empty(board)
 
 
 
