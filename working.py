@@ -11,6 +11,20 @@ board = [
         [0, 4, 9, 2, 0, 6, 0, 0, 7]
     ]
 
+def valid(bo, num, pos):
+
+    # Check row
+    for i in range(len(bo[0])):
+        if bo[pos[0]][i] == num and pos[1] != i:
+            return False
+
+    # Check column
+    for i in range(len(bo[0])):
+        if bo[i][pos[1]] == num and pos[0] != i:
+            return False
+
+
+
 def print_board(bo):
 
     for i in range(len(bo)):
@@ -28,6 +42,7 @@ def print_board(bo):
                 print(str(bo[i][j]) + " ", end="")
 
 def find_empty(bo):
+
     # iterate over the board
     for i in range(len(bo)):
         for j in range(len(bo[0])):
